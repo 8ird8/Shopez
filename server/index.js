@@ -9,7 +9,7 @@ require("dotenv").config();
 
 app.use(express.urlencoded({ extended: true }));
 const corsOptions = {
-  origin: "https://shopez-theta.vercel.app",
+  origin: "https://shopez-eight.vercel.app",
   methods: ["POST", "GET", "DELETE", "PUT"],
   credentials: true,
 };
