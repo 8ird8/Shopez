@@ -26,7 +26,7 @@ const MyCart = () => {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/mycart/${TokenInfo.userId}`,
+          `https://shopez-q69l.onrender.com/api/mycart/${TokenInfo.userId}`,
           {
             withCredentials: true,
           }
