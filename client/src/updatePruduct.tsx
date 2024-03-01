@@ -142,7 +142,7 @@ const UpdateProduct = () => {
                 <div className="relative mb-6 lg:mb-10 lg:h-96">
                   <img
                     className="object-contain w-full lg:h-full"
-                    src={`http://localhost:3000/public/${mainImage}`}
+                    src={`https://shopez-q69l.onrender.com/public/${mainImage}`}
                     alt="Product"
                   />
                 </div>
@@ -156,7 +156,7 @@ const UpdateProduct = () => {
                         >
                           <img
                             className="object-contain w-full lg:h-28"
-                            src={`http://localhost:3000/public/${image}`}
+                            src={`https://shopez-q69l.onrender.com/public/${image}`}
                             alt="Product thumbnail"
                           />
                         </button>
