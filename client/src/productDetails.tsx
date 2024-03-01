@@ -87,7 +87,7 @@ const Product = () => {
   const toggleLike = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/product/${productId}/cart`,
+        `https://shopez-q69l.onrender.com/api/product/${productId}/cart`,
         {},
         { withCredentials: true }
       );
@@ -109,7 +109,7 @@ const Product = () => {
   const handleDelete = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/api/delete/${productId}`,
+        `https://shopez-q69l.onrender.com/api/delete/${productId}`,
         {
           withCredentials: true,
         }
@@ -156,7 +156,7 @@ const Product = () => {
                 <div className="relative mb-6 lg:mb-10 lg:h-96">
                   <img
                     className="object-contain w-full lg:h-full"
-                    src={`http://localhost:3000/public/${mainImage}`}
+                    src={`https://shopez-q69l.onrender.com/public/${mainImage}`}
                     alt="Product"
                   />
                 </div>
@@ -169,7 +169,7 @@ const Product = () => {
                       >
                         <img
                           className="object-contain w-full h-28"
-                          src={`http://localhost:3000/public/${image}`}
+                          src={`https://shopez-q69l.onrender.com/public/${image}`}
                           alt="Product thumbnail"
                         />
                       </button>
@@ -303,7 +303,7 @@ const Product = () => {
                   <div className="flex">
                     <Avatar
                       alt={product?.creator.username}
-                      src={`http://localhost:3000/public/${product?.creator.avatar}`}
+                      src={`https://shopez-q69l.onrender.com/public/${product?.creator.avatar}`}
                       sx={{
                         width: 65,
                         height: 65,
