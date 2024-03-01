@@ -177,32 +177,32 @@ const loginUser = async (req, res) => {
           process.env.TOKEN_SECRET,
           { expiresIn: "2h" }
         );
-        // if (!data.isVerified) {
-        //   const VerifyToken = new Token({
-        //     userId: data._id,
-        //     token: token,
-        //   });
+        if (!data.isVerified) {
+          const VerifyToken = new Token({
+            userId: data._id,
+            token: token,
+          });
 
-        //   await VerifyToken.save();
+          await VerifyToken.save();
 
-        //   const link = `http://localhost:5173/users/${data._id}/verify/${VerifyToken.token}`;
-        //   const htmltemplate = `
-        //     <div>
-        //       <p>click to verify </p>
-        //       <a href="${link}"> here</a>
-        //     </div>`;
+          const link = `http://localhost:5173/users/${data._id}/verify/${VerifyToken.token}`;
+          const htmltemplate = `
+            <div>
+              <p>click to verify </p>
+              <a href="${link}"> here</a>
+            </div>`;
 
-        //   await sendMail(data.email, "Verify email", htmltemplate);
-        //   return res.status(401).json({
-        //     success: false,
-        //     message: "Please verify your email address ,we sent you an email ",
-        //   });
-        // }
+          await sendMail(data.email, "Verify email", htmltemplate);
+          return res.status(401).json({
+            success: false,
+            message: "Please verify your email address ,we sent you an email ",
+          });
+        }
         res.cookie("token", token, {
-          // httpOnly: true,
-          // secure: true,
-          // sameSite: "None",
-          // maxAge: 80900000,
+          httpOnly: true,
+          secure: true,
+          sameSite: "None",
+          maxAge: 80900000,
         });
         res
           .status(200)
