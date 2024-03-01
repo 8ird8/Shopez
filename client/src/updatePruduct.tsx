@@ -61,7 +61,7 @@ const UpdateProduct = () => {
   const handleImageDelete = async (imageName: string) => {
     try {
       await axios.delete(
-        `http://localhost:3000/api/product/${productId}/image/${imageName}`,
+        `https://shopez-q69l.onrender.com/api/product/${productId}/image/${imageName}`,
         {
           withCredentials: true,
         }
