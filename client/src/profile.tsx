@@ -27,7 +27,7 @@ const Profile = () => {
                     <div className="mb-16">
                       <img
                         className="object-cover m-auto w-40 h-40 p-1 rounded-full ring-2 ring-indigo-300 dark:ring-indigo-500"
-                        src={`http://localhost:3000/public/${currentUserInfo.avatar}`}
+                        src={`https://shopez-q69l.onrender.com/public/${currentUserInfo.avatar}`}
                         alt="Bordered avatar"
                       />
                       <h2 className="pl-6 text-3xl text-center capitalize mt-4  font-bold sm:text-2xl">
