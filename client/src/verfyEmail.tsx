@@ -9,7 +9,7 @@ const VerfyEmail = () => {
     const verifyEmail = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/users/${userId}/verify/${token}`,
+          `https://shopez-q69l.onrender.com/api/users/${userId}/verify/${token}`,
           {
             withCredentials: true,
           }
