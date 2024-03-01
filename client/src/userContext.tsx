@@ -37,7 +37,7 @@ export const UserProvider = ({ children }: Props) => {
     const token = localStorage.getItem('token');
     if (token) {
       try {
-        const res = await axios.get("http://localhost:3000/api/userbytoken", {
+        const res = await axios.get("https://shopez-q69l.onrender.com/api/userbytoken", {
           withCredentials: true,
         });
   
@@ -56,7 +56,7 @@ export const UserProvider = ({ children }: Props) => {
   const fetchCurrentUser = useCallback(async () => {
     if (TokenInfo.userId) {
       try {
-        const res = await axios.get(`http://localhost:3000/api/user/${TokenInfo.userId}`, {
+        const res = await axios.get(`https://shopez-q69l.onrender.com/api/user/${TokenInfo.userId}`, {
           withCredentials: true,
         });
 
