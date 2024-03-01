@@ -131,7 +131,7 @@ const Mylistings = () => {
                   <div className="flex flex-row items-center">
                     <Avatar
                       alt={currentUserInfo.username}
-                      src={`http://localhost:3000/public/${currentUserInfo.avatar}`}
+                      src={`https://shopez-q69l.onrender.com/public/${currentUserInfo.avatar}`}
                       sx={{
                         width: 40,
                         height: 40,
@@ -174,7 +174,7 @@ const Mylistings = () => {
                     <Card
                       Name={product.product_Name}
                       imageUrl={[
-                        `http://localhost:3000/public/${product.product_Images[0]}`,
+                        `https://shopez-q69l.onrender.com/public/${product.product_Images[0]}`,
                       ]}
                       price={product.product_Price}
                       productId={product._id}
