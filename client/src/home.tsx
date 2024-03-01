@@ -16,6 +16,7 @@ interface Product {
   _id: string;
   product_Category: string;
   incart: string[];
+  
 }
 
 const Home = () => {
