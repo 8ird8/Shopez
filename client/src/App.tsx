@@ -8,7 +8,7 @@ import Product from "./productDetails";
 import { UserProvider } from "./userContext";
 import Profile from "./profile";
 import Setting from "./setting";
-import Cookies from "js-cookie";
+
 import Mylistings from "./mylisting";
 import UpdateProduct from "./updatePruduct";
 import MyCart from "./mycart";
