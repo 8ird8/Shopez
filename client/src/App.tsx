@@ -52,9 +52,9 @@ const AppRoutes: React.FC = () => {
       <Route
         path="/home"
         element={
-          <CheckToken>
+{/*           <CheckToken> */}
             <Home />
-          </CheckToken>
+          // </CheckToken>
         }
       />
       <Route
