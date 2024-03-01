@@ -32,7 +32,7 @@ const Setting = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:3000/api/user/update/${TokenInfo.userId}`,
+        `https://shopez-q69l.onrender.com/api/user/update/${TokenInfo.userId}`,
         formData,
         { withCredentials: true }
       );
