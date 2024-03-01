@@ -10,7 +10,7 @@ const Sidebar = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.get("http://localhost:3000/api/logout", {
+      const res = await axios.get("https://shopez-q69l.onrender.com/api/logout", {
         withCredentials: true,
       });
 
