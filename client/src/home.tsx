@@ -28,7 +28,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/products", {
+        const res = await axios.get("https://shopez-q69l.onrender.com/api/products", {
           withCredentials: true,
         });
 
