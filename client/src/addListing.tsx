@@ -30,7 +30,7 @@ const AddListing = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:3000/api/List", formData, {
+      const res = await axios.post("https://shopez-q69l.onrender.com/api/List", formData, {
         withCredentials: true,
         // headers: {
         //   "Content-Type": "multipart/form-data ",
