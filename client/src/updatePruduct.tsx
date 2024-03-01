@@ -34,7 +34,7 @@ const UpdateProduct = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/product/${productId}`,
+          `https://shopez-q69l.onrender.com/api/product/${productId}`,
           {
             withCredentials: true,
           }
