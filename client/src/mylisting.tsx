@@ -27,7 +27,7 @@ const Mylistings = () => {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/mylistings/${TokenInfo.userId}`,
+          `https://shopez-q69l.onrender.com/api/mylistings/${TokenInfo.userId}`,
           {
             withCredentials: true,
           }
