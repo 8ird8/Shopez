@@ -83,7 +83,7 @@ const UpdateProduct = () => {
   const handleDelete = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/api/delete/${productId}`,
+        `https://shopez-q69l.onrender.com/api/delete/${productId}`,
         {
           withCredentials: true,
         }
@@ -116,7 +116,7 @@ const UpdateProduct = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:3000/api/updateProduct/${productId}`,
+        `https://shopez-q69l.onrender.com/api/updateProduct/${productId}`,
         formData,
         {
           withCredentials: true,
