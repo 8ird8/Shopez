@@ -9,7 +9,7 @@ const AddProduct = async (req, res) => {
   try {
     const decodedToken = jwt.verify(
       req.cookies.token,
-      "arrrrrryskldmùdùfnhgzfdcevnkorp^rfnfbbfvdvd"
+      process.env.TOKEN_SECRET
     );
 
     const data = {
