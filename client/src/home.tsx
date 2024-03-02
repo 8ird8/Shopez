@@ -53,9 +53,8 @@ const Home = () => {
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
-      if (!filter.category) return products;
       const matchesCategory = filter.category ? product.product_Category === filter.category : true;
-      const matchesSearch = search === "" ? true : product.product_Name.toLowerCase().includes(search.toLowerCase());
+      const matchesSearch = search ? product.product_Name.toLowerCase().includes(search.toLowerCase()) : true;
       return matchesCategory && matchesSearch;
     });
   }, [products, search, filter.category]);
