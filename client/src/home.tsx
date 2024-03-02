@@ -61,7 +61,7 @@ const Home = () => {
   }, [products, search, filter.category]);
 
   const resetFilter = async () => {
-    setFilter({ category: '', search:'' }); 
+    setFilter({ category: '' }); 
   };
 
   useEffect(() => {
