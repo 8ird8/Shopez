@@ -134,7 +134,7 @@ const Setting = () => {
                         className="bg-indigo-50 border border-indigo-300  text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
                         placeholder="New password"
                         onChange={(e) => setPassword(e.target.value)}
-                        required
+                        
                       />
                     </div>
                     <label className="flex items-center mb-6 cursor-pointer text-blue-600 hover:text-blue-800">
