@@ -50,7 +50,7 @@ const registerUser = async (req, res) => {
 
         await VerifyToken.save();
 
-        const link = `http://localhost:5173/users/${newUser._id}/verify/${VerifyToken.token}`;
+        const link = `https://shopez-eight.vercel.app/users/${newUser._id}/verify/${VerifyToken.token}`;
         const htmltemplate = `
         <div style="
             width: 100%;
