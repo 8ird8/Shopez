@@ -58,7 +58,7 @@ const Login = () => {
         <div className="py-4 m-auto h-screen">
           <div className="flex items-center justify-center w-1/3  bg-white rounded-xl shadow-lg overflow-hidden m-auto  ">
            
-            <div className="w-full lg:w-1/3 p-8 ">
+            <div className="w-full md:w-3/2 lg:w-1/3 p-8 ">
               <h2 className="text-2xl font-semibold text-gray-700 text-center">
                 Welcome back!
               </h2>
