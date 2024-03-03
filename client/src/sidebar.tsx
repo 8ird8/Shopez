@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 const Sidebar = () => {
   const location = useLocation();
   const [open, setOpen] = useState(true);
+  const AssetsUrl = import.meta.env.VITE_ASSETS_URL;
 
   const navigate = useNavigate();
 
