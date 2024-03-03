@@ -29,8 +29,9 @@ const Sidebar = () => {
   const handleClick = () => {
     if (open){
       setOpen(false)
-  }else{
-      setOpen(true)
+    }else{
+        setOpen(true)
+    }
   }
 
   return (
