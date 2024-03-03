@@ -26,11 +26,17 @@ const Sidebar = () => {
       console.error("Error logging out:", error);
     }
   };
+  const handleClick = () => {
+    if (open){
+      setOpen(false)
+  }else{
+      setOpen(true)
+  }
 
   return (
     <>
     <div className="absolute top-4 left-4"
-      onClick={() =>setOpen(false)}>
+      onClick={ handleClick}>
       <img src="bars.png" alt="menu"  className=""/>
 
       </div>
