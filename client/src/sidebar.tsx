@@ -39,7 +39,7 @@ const Sidebar = () => {
     <>
     <div className="absolute top-4 left-4"
       onClick={ handleClick}>
-      <img src={`${AssetsUrl}/bars.png`} alt="menu"  className=""/>
+      <img src={`${AssetsUrl}/bars.png`} alt="menu"  className="w-6 h-6"/>
 
       </div>
       <div className="flex flex-row min-h-screen bg-gray-100 text-gray-800">
