@@ -59,7 +59,7 @@ const Setting = () => {
 
   return (
     <div className="flex justify-between">
-      <div className="relative">
+      <div className=" md:block lg:block">
         <Sidebar />
       </div>
 
