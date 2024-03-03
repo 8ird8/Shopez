@@ -10,7 +10,9 @@ const Setting = () => {
   const [username, setUsername] = useState(currentUserInfo.username || "");
   const [email, setEmail] = useState(currentUserInfo.email || "");
   const [phone, setPhone] = useState(currentUserInfo.phone || "+212");
-  const [adresse, setAdresse] = useState(currentUserInfo.adresse || "Your adresse");
+  const [adresse, setAdresse] = useState(
+    currentUserInfo.adresse || "Your adresse"
+  );
   const [password, setPassword] = useState("");
   const [Message, setMessage] = useState<string | null>(null);
 
@@ -32,7 +34,7 @@ const Setting = () => {
 
     try {
       const res = await axios.put(
-        `https://shopez-q69l.onrender.com/api/user/update/${TokenInfo.userId}`,
+        `http://localhost:3000/api/user/update/${TokenInfo.userId}`,
         formData,
         { withCredentials: true }
       );
@@ -53,15 +55,15 @@ const Setting = () => {
   useEffect(() => {
     fetchCurrentUser();
     fetchTokenInfo();
-  }, [fetchCurrentUser,fetchTokenInfo]);
+  }, [fetchCurrentUser, fetchTokenInfo]);
 
   return (
     <div className="flex justify-between">
-      <div>
+      <div className="relative">
         <Sidebar />
       </div>
-      <div className="bg-white m-auto w-full flex flex-col gap-5 px-3 md:px-16 lg:px-28 md:flex-row text-[#161931]">
-        
+
+      <div className="bg-white mt-6 m-auto w-full flex flex-col gap-5 px-3 md:px-16 lg:px-28 md:flex-row text-[#161931]">
         <main className="w-full m-auto min-h-screen py-1 md:w-2/3 lg:w-3/4">
           <div className="p-2 md:p-4">
             <div className="w-full px-6 pb-8 mt-8 sm:max-w-xl sm:rounded-lg">
@@ -114,7 +116,7 @@ const Setting = () => {
                     </div>
                     <div className="mb-2 sm:mb-2">
                       <label className="block mb-2 text-sm font-medium text-indigo-900 ">
-                        Adresse : 
+                        Adresse :
                       </label>
                       <input
                         type="adresse"
@@ -134,7 +136,7 @@ const Setting = () => {
                         className="bg-indigo-50 border border-indigo-300  text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 "
                         placeholder="New password"
                         onChange={(e) => setPassword(e.target.value)}
-                        
+                        required
                       />
                     </div>
                     <label className="flex items-center mb-6 cursor-pointer text-blue-600 hover:text-blue-800">
