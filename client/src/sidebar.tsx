@@ -1,8 +1,11 @@
+import { Hidden } from "@mui/material";
 import axios from "axios";
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const location = useLocation();
+  const [open, setOpen] = useState(false);
 
   const navigate = useNavigate();
 
@@ -28,8 +31,8 @@ const Sidebar = () => {
   return (
     <>
       <div className="flex flex-row min-h-screen bg-gray-100 text-gray-800">
-        <aside className="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-slate-600">
-          <div className="sidebar-content px-4 py-6">
+        <aside className={ `sidebar w-64 md:shadow  ${open ? "hidden lg:block md:block" : "block"}  transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-slate-600 `}>
+          <div className="sidebar-content  px-4 py-6">
             <ul className="flex flex-col w-full">
               <li className="my-px">
                 <Link
@@ -223,4 +226,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-
